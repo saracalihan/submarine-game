@@ -163,6 +163,7 @@ const display = () => {
   document.getElementById("contactStatus").style.fontWeight = contact.isDisplay ? (contact.isEnemy ? 'bold' : 'normal') : 'normal'
   document.getElementById("torpedoSlot").innerText = submarine.torpedoSlot
   document.getElementById("launcherStatus").innerText = submarine.torpedoLauncherStatus
+  document.getElementById("launcherStatus").style.fontWeight = submarine.torpedoLauncherStatus === 'READY' ? 'bold' : 'normal'
   if (false && submarine.torpedoLauncherStatus === 'Reloading') {
     submarine.reloadTime -= fps
     document.getElementById("fire").innerText = submarine.reloadTime
